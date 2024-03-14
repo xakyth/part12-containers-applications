@@ -1,0 +1,107 @@
+Script started on 2024-03-14 06:58:38+03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="157" LINES="34"]
+[1m[7m%[27m[1m[0m                                                                                                                                                            
+ 
+
+[0m[27m[24m[J
+[1;36mpart12-containers-applications[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m][0m 
+[1;32m❯[0m [K[?1h=[?2004hddocker container run -it ubuntu bash[?1l>[?2004l
+
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K
+bccd10f490ab: Pulling fs layer 
+[1B[1A[2K
+bccd10f490ab: Downloading [>                                                  ]  311.3kB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [==>                                                ]  1.239MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [====>                                              ]   2.46MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [=======>                                           ]  4.307MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [=========>                                         ]  5.548MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [===========>                                       ]  6.794MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [=============>                                     ]  8.039MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [===============>                                   ]  9.284MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [=================>                                 ]  10.52MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [===================>                               ]  11.75MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [=====================>                             ]  12.99MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [========================>                          ]  14.23MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [==========================>                        ]  15.47MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [============================>                      ]  16.71MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [==============================>                    ]  17.95MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [================================>                  ]  19.19MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [==================================>                ]  20.11MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [====================================>              ]  21.33MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [======================================>            ]  22.58MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [========================================>          ]  23.81MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [==========================================>        ]  25.05MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [============================================>      ]  26.29MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [==============================================>    ]  27.52MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Downloading [================================================>  ]  28.76MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Verifying Checksum 
+[1B[1A[2K
+bccd10f490ab: Download complete 
+[1B[1A[2K
+bccd10f490ab: Extracting [>                                                  ]  327.7kB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [=======>                                           ]  4.588MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [=============>                                     ]  7.864MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [================>                                  ]   9.83MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [========================>                          ]  14.42MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [==================================>                ]  20.64MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [==========================================>        ]  25.23MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [===========================================>       ]  25.89MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [===============================================>   ]  28.18MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [=================================================> ]  29.16MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Extracting [==================================================>]  29.54MB/29.54MB
+[1B[1A[2K
+bccd10f490ab: Pull complete 
+[1BDigest: sha256:77906da86b60585ce12215807090eb327e7386c8fafb5402369e421f44eff17e
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@5c5a4c2de77e: /root@5c5a4c2de77e:/# mkdir /s usr/src/app[1@-[1@p[1@ 
+[?2004l
+[?2004h]0;root@5c5a4c2de77e: /root@5c5a4c2de77e:/# touch /usr/. src/app/index.js
+[?2004l
+[?2004h]0;root@5c5a4c2de77e: /root@5c5a4c2de77e:/# [Kexit
+[?2004l
+exit
+[1m[7m%[27m[1m[0m                                                                                                                                                            
+ 
+
+[0m[27m[24m[J
+[1;36mpart12-containers-applications[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m][0m took [1;33m42s[0m 
+[1;32m❯[0m [K[?1h=[?2004heexit[?1l>[?2004l
+
+
+Script done on 2024-03-14 06:59:41+03:00 [COMMAND_EXIT_CODE="0"]
