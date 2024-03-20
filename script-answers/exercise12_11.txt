@@ -1,0 +1,38 @@
+Script started on 2024-03-20 07:06:45+03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="79" LINES="36"]
+[1m[7m%[27m[1m[0m                                                                               [0m[27m[24m[J
+[1;36mpart12-containers-applications/todo-app/todo-backend[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m][0m via [1;32m [0m[1;32mv16.20.2[0m[1;32m [0m
+[1;32m❯[0m [K[?1h=[?2004hddocker exec           ddocker ps -a[?1l>[?2004l
+CONTAINER ID   IMAGE             COMMAND                  CREATED        STATUS                    PORTS                     NAMES
+3a26dca39850   redis             "docker-entrypoint.s…"   11 hours ago   Up 34 minutes             0.0.0.0:3001->6379/tcp    todo-backend-redis-1
+29664ab5c056   fs-todo-backend   "docker-entrypoint.s…"   25 hours ago   Exited (1) 25 hours ago                             todo-backend-todo-app-1
+0aa5f471c02b   mongo             "docker-entrypoint.s…"   2 days ago     Up 34 minutes             0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+3f70b0281a83   fs-todo-backend   "docker-entrypoint.s…"   5 days ago     Exited (137) 5 days ago                             kind_cerf
+363bfdd0c923   express-server    "docker-entrypoint.s…"   5 days ago     Exited (137) 5 days ago                             upbeat_ritchie
+4c50a36e2362   35366bb6499e      "docker-entrypoint.s…"   5 days ago     Exited (137) 5 days ago                             elastic_lewin
+354f77be52c2   fs-hello-world    "docker-entrypoint.s…"   5 days ago     Exited (0) 5 days ago                               youthful_khorana
+43b4cc66fb6e   node:16           "docker-entrypoint.s…"   5 days ago     Exited (0) 5 days ago                               determined_panini
+e43a40d5f70d   node:16           "docker-entrypoint.s…"   5 days ago     Exited (127) 5 days ago                             hello-node
+[1m[7m%[27m[1m[0m                                                                               [0m[27m[24m[J
+[1;36mpart12-containers-applications/todo-app/todo-backend[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m][0m via [1;32m [0m[1;32mv16.20.2[0m[1;32m [0m
+[1;32m❯[0m [K[?1h=[?2004hddocker conatiner[9D         [9Dexec 3a26d [1C 3a26d - 3a26d i 3a26d t 3a26d [1C[1C[1C[1C[1C[1C[1Cbash[?1l>[?2004l
+[?2004hroot@3a26dca39850:/data# KEYS *      redis-cli KEYS *
+[?2004l1) "added_todos"
+[?2004hroot@3a26dca39850:/data# redis  -clie    GET added_todos
+[?2004l"2"
+[?2004hroot@3a26dca39850:/data# redis-CLI  cl   cli SET added_todos 9001
+[?2004lOK
+[?2004hroot@3a26dca39850:/data# desui     res-cl     edis-cli GET added_todos
+[?2004l\"9002"
+[?2004hroot@3a26dca39850:/data# \ redis-0 clie  DEL added_todos
+[?2004l(integer) 1
+[?2004hroot@3a26dca39850:/data# redis-cli DEL added_todosGET added_todos
+[?2004l(nil)
+[?2004hroot@3a26dca39850:/data# redis-cli GET added_todos
+[?2004l"1"
+[?2004hroot@3a26dca39850:/data# exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                               [0m[27m[24m[J
+[1;36mpart12-containers-applications/todo-app/todo-backend[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m][0m via [1;32m [0m[1;32mv16.20.2[0m[1;32m [0mtook [1;33m4m35s[0m 
+[1;32m❯[0m [K[?1h=[?2004heexit[?1l>[?2004l
+
+Script done on 2024-03-20 07:12:20+03:00 [COMMAND_EXIT_CODE="0"]
