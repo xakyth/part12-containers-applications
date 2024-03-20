@@ -1,0 +1,103 @@
+Script started on 2024-03-20 06:20:32+03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="122" LINES="36"]
+[1m[7m%[27m[1m[0m                                                                                                                          [0m[27m[24m[J
+[1;36mpart12-containers-applications/todo-app/todo-backend[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;32m [0m[1;32mv16.20.2[0m[1;32m [0m
+[1;32m❯[0m [K[?1h=[?2004hddocker conatiner[9D         [9Dps -a[?1l>[?2004l
+CONTAINER ID   IMAGE             COMMAND                  CREATED        STATUS                      PORTS                     NAMES
+3a26dca39850   redis             "docker-entrypoint.s…"   10 hours ago   Exited (137) 10 hours ago                             todo-backend-redis-1
+29664ab5c056   fs-todo-backend   "docker-entrypoint.s…"   24 hours ago   Exited (1) 24 hours ago                               todo-backend-todo-app-1
+0aa5f471c02b   mongo             "docker-entrypoint.s…"   47 hours ago   Up 14 seconds               0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+3f70b0281a83   fs-todo-backend   "docker-entrypoint.s…"   5 days ago     Exited (137) 5 days ago                               kind_cerf
+363bfdd0c923   express-server    "docker-entrypoint.s…"   5 days ago     Exited (137) 5 days ago                               upbeat_ritchie
+4c50a36e2362   35366bb6499e      "docker-entrypoint.s…"   5 days ago     Exited (137) 5 days ago                               elastic_lewin
+354f77be52c2   fs-hello-world    "docker-entrypoint.s…"   5 days ago     Exited (0) 5 days ago                                 youthful_khorana
+43b4cc66fb6e   node:16           "docker-entrypoint.s…"   5 days ago     Exited (0) 5 days ago                                 determined_panini
+e43a40d5f70d   node:16           "docker-entrypoint.s…"   5 days ago     Exited (127) 5 days ago                               hello-node
+[1m[7m%[27m[1m[0m                                                                                                                          [0m[27m[24m[J
+[1;36mpart12-containers-applications/todo-app/todo-backend[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;32m [0m[1;32mv16.20.2[0m[1;32m [0m
+[1;32m❯[0m [K[?1h=[?2004hddocker exec -it 0aa5f bash[?1l>[?2004l
+[?2004hroot@0aa5f471c02b:/# mongosh
+[?2004l]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	65fa564a1240ae832d19d9d2
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.5[0m
+Using MongoDB:		7.0.6
+[1m[33mUsing Mongosh[0m:		2.1.5
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the [1mdisableTelemetry()[0m command.
+
+[1G[0J [1G[1G[0Jtest> [7Gshow dbs
+Uncaught [1m[31mMongoServerError[0m[1m[31m[Unauthorized][0m: Command listDatabases requires authentication
+[1G[0Jtest> [7Gexit
+[?2004hroot@0aa5f471c02b:/# mongosh = -u root -p  e  example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	65fa566da4ac39253742e0a8
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.5[0m
+Using MongoDB:		7.0.6
+[1m[33mUsing Mongosh[0m:		2.1.5
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2024-03-20T03:20:42.771+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2024-03-20T03:20:43.468+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2024-03-20T03:20:43.468+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gmongosh[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         72.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   56.00 KiB
+[1G[0Jtest> [7Guise [1G[0Jtest> uise[11G[1G[0Jtest> uis[10G[1G[0Jtest> ui[9G[1G[0Jtest> u[8Gse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow t[1G[0Jthe_database> show [20Gcollections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todoso[1G[0Jthe_database> db.todos[23G.find({})
+[
+  {
+    _id: ObjectId([32m'65f7bb7c17ec6f6a85c264cf'[39m),
+    text: [32m'Write code1'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'65f7bb7c17ec6f6a85c264d0'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.to
+db.toLocaleString  db.toString        db.todos
+
+[1G[0Jthe_database> db.to[20Gdos.insertOne[1G[0Jthe_database> db.todos.insertOn[32Ge({ text[33mtext[39m: [32m'[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m'[39m, d[36mdo[39mdone: fals[33mfalse[39m })
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'65fa56f3a4ac39253742e0a9'[39m)
+}
+[1G[0Jthe_database> [15Gd[36mdo[39m[1G[0Jthe_database> d[16G[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'65f7bb7c17ec6f6a85c264cf'[39m),
+    text: [32m'Write code1'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'65f7bb7c17ec6f6a85c264d0'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'65fa56f3a4ac39253742e0a9'[39m),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15G[1G[0Jthe_database> [15Gexit
+[?2004hroot@0aa5f471c02b:/# exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                               [0m[27m[24m[J
+[1;36mpart12-containers-applications/todo-app/todo-backend[0m on [1;35m [0m[1;35mmain[0m [1;31m[[0m[1;31m?[0m[1;31m⇡[0m[1;31m][0m via [1;32m [0m[1;32mv16.20.2[0m[1;32m [0mtook [1;33m4m18s[0m 
+[1;32m❯[0m [K[?1h=[?2004heexit[?1l>[?2004l
+
+Script done on 2024-03-20 06:25:47+03:00 [COMMAND_EXIT_CODE="0"]
