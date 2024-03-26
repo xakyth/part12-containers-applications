@@ -3,27 +3,23 @@ services:
     image: todo-frontend-dev
     build: 
       context: ./todo-frontend
-      dockerfile: ./todo-frontend/dev.Dockerfile
+      dockerfile: ./dev.Dockerfile
     volumes:
-      - ./todo-frontend:/usr/src/todo-app/todo-frontend
+      - ./todo-frontend/:/usr/src/todo-app/todo-frontend
     environment:
       - PORT=5173
-    ports:
-      - 5173:5173
     container_name: todo-frontend-dev
   back-dev:
     image: todo-backend-dev
     build: 
       context: ./todo-backend
-      dockerfile: ./todo-backend/dev.Dockerfile
+      dockerfile: ./dev.Dockerfile
     volumes:
-      - ./todo-backend:/usr/src/todo-app/todo-backend
+      - ./todo-backend/:/usr/src/todo-app/todo-backend
     environment:
       - REDIS_URL=redis://redis:6379
       - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
       - PORT=3000
-    ports:  
-      - 3000:3000
   mongo:
     image: mongo
     ports:
@@ -51,3 +47,4 @@ services:
     container_name: todo-reverse-proxy
     depends_on:
       - front-dev
+      - back-dev
