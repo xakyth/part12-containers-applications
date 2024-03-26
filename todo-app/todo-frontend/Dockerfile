@@ -1,6 +1,6 @@
 FROM node:16 as build-stage
 WORKDIR /usr/src/todo-app/todo-frontend
-ENV REACT_APP_BACKEND_URL=http://localhost:3000
+ENV REACT_APP_BACKEND_URL=http://localhost:8080/api
 COPY . .
 RUN npm ci
 RUN npm run build
