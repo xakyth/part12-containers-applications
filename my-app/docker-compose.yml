@@ -1,0 +1,22 @@
+services:
+  front-prod:
+    image: frontend-prod
+    build: 
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    container_name: frontend-prod
+  back-prod:
+    image: backend-prod
+    build: 
+      context: ./backend
+      dockerfile: ./Dockerfile
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: my-app-prod-reverse-proxy
+    depends_on:
+      - front-prod
+      - back-prod
